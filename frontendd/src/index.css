@@ -1,0 +1,40 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Vibrant Background */
+body {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #ffe100; /* Fallback color */
+  background: linear-gradient(135deg, #39ffef 0%, #ff7300 50%, #ff0000 100%);
+  
+}
+
+/* Main App Container */
+#root {
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    width: 95%;
+    padding: 20px;
+  }
+}

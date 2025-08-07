@@ -1,0 +1,172 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #ffffff; /* Fallback color */
+  background: linear-gradient(135deg, #9aff3c 0%, #605750 50%, #0f7a8d 100%);
+  
+}
+
+/* App Container */
+#root, .app-container {
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* To-Do List Container */
+.todo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* To-Do Item */
+.todo-item {
+  background: linear-gradient(135deg, #00ff88, #00aaff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  flex: 1 1 calc(33.33% - 20px);
+  min-width: 250px;
+  max-width: 300px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+.todo-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* To-Do Title */
+.todo-item h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+/* To-Do Description */
+.todo-item h2 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* To-Do Buttons */
+.todo-item button {
+  background: #ff1493;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.todo-item button:hover {
+  background: #c2185b;
+  transform: scale(1.08);
+}
+
+/* Completed Task Button */
+.done-button {
+  background: #00c853 !important;
+}
+
+.done-button:hover {
+  background: #008c3a !important;
+}
+
+/* Add Todo Section */
+.add-todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields */
+.todo-input {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 280px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Checkbox Label */
+.todo-checkbox {
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Add To-Do Button */
+.add-todo-button {
+  background: #ffcc00;
+  border: none;
+  padding: 12px 18px;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.add-todo-button:hover {
+  background: #ff8800;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .todo-item {
+    flex: 1 1 100%;
+  }
+}
