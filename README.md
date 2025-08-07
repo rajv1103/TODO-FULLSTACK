@@ -1,9 +1,9 @@
 
-
-```markdown
 # 📝 Todo App Backend
 
 This is the **backend API** for a fullstack Todo App built with **Node.js**, **Express**, and **MongoDB** using **Mongoose**.
+
+---
 
 ## 📦 Tech Stack
 
@@ -55,7 +55,7 @@ Create a `.env` file in the `backend/` directory and add your MongoDB URL:
 MONGO_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/user_app?retryWrites=true&w=majority&appName=Cluster0
 ```
 
-> 🔐 Make sure not to commit `.env` to GitHub.
+> 🔐 **Important:** Make sure to add `.env` to your `.gitignore` to avoid committing sensitive information.
 
 ### 4. Start the server
 
@@ -63,7 +63,7 @@ MONGO_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/user_app?retr
 node index.js
 ```
 
-You should see:
+If everything works, you should see:
 
 ```
 Server running on port 3000
@@ -74,9 +74,9 @@ MongoDB Connected
 
 ## 📡 API Endpoints
 
-### Create a Todo
+### ➕ Create a Todo
 
-`POST /todo`
+**POST** `/todo`
 
 **Request Body:**
 
@@ -89,15 +89,15 @@ MongoDB Connected
 
 ---
 
-### Get All Todos
+### 📋 Get All Todos
 
-`GET /todo`
+**GET** `/todo`
 
 ---
 
-### Mark Todo as Completed
+### ✅ Mark Todo as Completed
 
-`POST /completed`
+**POST** `/completed`
 
 **Request Body:**
 
@@ -112,13 +112,14 @@ MongoDB Connected
 ## ✅ Validation
 
 * Validation is handled via **Zod** schemas in `middleware.js`.
-* Ensures that request bodies are properly formatted.
+* Ensures that request bodies are properly structured and complete.
 
 ---
 
 ## 🧑‍💻 Author
 
-Created by **Raj Verma**.
+Created by **Raj Verma**
 Feel free to reach out for any collaboration or feedback!
 
+```
 
